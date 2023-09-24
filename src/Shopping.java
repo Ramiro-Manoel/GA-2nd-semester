@@ -97,12 +97,15 @@ public class Shopping {
 	public Loja lojaSeguroMaisCaro() {
 		
 		int lojaMaisCara = -1;
+		double maior = 0;
 		for (int i = 0; i < lojas.length; i++) {
-			double maior = 0;
-			if (lojas[i] instanceof Informatica && ((Informatica) lojas[i]).getSeguroEletronicos() > maior) {
+			if (lojas[i] instanceof Informatica) {
+				if(((Informatica) lojas[i]).getSeguroEletronicos() > maior) {
 				maior = ((Informatica) lojas[i]).getSeguroEletronicos();
 				lojaMaisCara = i;
+				}
 			}
+			
 		}
 		if(lojaMaisCara > -1) {
 			return lojas[lojaMaisCara];

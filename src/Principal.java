@@ -37,8 +37,7 @@ public class Principal {
 		 * System.out.println("nome da rua:"); String nomeDaRuaShopping = sc.nextLine();
 		 */
 		
-		 Shopping shopping = new Shopping("oi", n, 0)
-		 
+
 	}
 	// }
 
