@@ -3,6 +3,8 @@ import java.util.InputMismatchException;
 public class Data {
 	private int dia, mes, ano;
 
+	public Data() {}
+			
 	public Data(int dia, int mes, int ano) throws DataExececao {
 		try {
 			

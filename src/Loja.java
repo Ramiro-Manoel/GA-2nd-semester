@@ -8,6 +8,8 @@ public class Loja {
 	private Data dataFundacao;
 	private Produto[] estoqueProdutos;
 	
+	public Loja() {}
+	
 	public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, int tam) {
 		super();
 		this.nome = nome;

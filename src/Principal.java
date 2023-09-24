@@ -36,11 +36,9 @@ public class Principal {
 		 * System.out.println("Onde o shopping se localiza?");
 		 * System.out.println("nome da rua:"); String nomeDaRuaShopping = sc.nextLine();
 		 */
-		 Data data = new Data(sc.nextInt(), sc.nextInt(), sc.nextInt());
-		System.out.println(data);
-		Produto produto = new Produto();
-		//produto.setDataval(data);
-		System.out.println(produto.estaVencido(new Data(18,9,2024)));
+		
+		 Shopping shopping = new Shopping("oi", n, 0)
+		 
 	}
 	// }
 

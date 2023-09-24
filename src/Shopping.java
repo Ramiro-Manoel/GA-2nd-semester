@@ -5,6 +5,8 @@ public class Shopping {
 	private Endereco endereco;
 	private Loja[] lojas;
 
+	public Shopping() {}
+	
 	public Shopping(String nome, Endereco endereco, int tam) {
 		super();
 		this.nome = nome;
