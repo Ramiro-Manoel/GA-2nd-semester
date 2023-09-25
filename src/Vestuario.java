@@ -5,6 +5,7 @@ public class Vestuario extends Loja {
 
 	public Vestuario() {}
 	
+	
 	public Vestuario(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco,
 			Data dataFundacao, boolean produtosImportados, int tamanho) {
 		super(nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataFundacao, tamanho);

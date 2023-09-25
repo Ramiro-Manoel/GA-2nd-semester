@@ -29,12 +29,7 @@ public class Data {
 		}
 		
 		catch (DataExececao c) {
-			System.out.println(c);
-			this.dia = 1;
-			this.mes = 1;
-			this.ano = 2000;
-		}
-		catch (InputMismatchException e) {
+			System.out.println(c + "\nData setada como valor default (01/01/2000)");
 			this.dia = 1;
 			this.mes = 1;
 			this.ano = 2000;
