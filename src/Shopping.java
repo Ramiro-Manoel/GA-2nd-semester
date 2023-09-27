@@ -1,6 +1,8 @@
+import java.io.Serializable;
 import java.util.Arrays;
 
-public class Shopping {
+public class Shopping implements Serializable{
+	
 	private String nome;
 	private Endereco endereco;
 	private Loja[] lojas;
@@ -38,11 +40,32 @@ public class Shopping {
 		this.lojas = lojas;
 	}
 
+	
+	public void exibeDados() {
+		System.out.println(toString());
+		exibeLojas();
+	}
+	
 	@Override
 	public String toString() {
-		return "Shopping [nome=" + nome + ", endereco=" + endereco + ", lojas=" + Arrays.toString(lojas) + "]";
+		return "(Shopping) nome: " + nome + "\nendereço: " + endereco;
 	}
 
+	public void exibeLojas() {
+		System.out.println("lojas:");
+		for (int i = 0; i < lojas.length; i++) {
+			if(lojas[i] instanceof Vestuario) {
+				System.out.println(i + " - " + lojas[i].getNome() + " (Vestuario)");
+			}
+			if(lojas[i] instanceof Alimentacao) {
+				System.out.println(i + " - " + lojas[i].getNome() + " (Alimentacao)");
+			}
+			if(lojas[i] instanceof Informatica) {
+				System.out.println(i + " - " + lojas[i].getNome() + " (Informatica)");
+			}
+		}
+	}
+	
 	public boolean insereLoja(Loja loja) {
 		for (int i = 0; i < lojas.length; i++) {
 			if (lojas[i] == null) {

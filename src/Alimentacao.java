@@ -1,5 +1,6 @@
+import java.io.Serializable;
 
-public class Alimentacao extends Loja {
+public class Alimentacao extends Loja implements Serializable{
 	
 	private Data dataAlvara;
 
@@ -18,7 +19,13 @@ public class Alimentacao extends Loja {
 	public void setDataAlvara(Data dataAlvara) {
 		this.dataAlvara = dataAlvara;
 	}
-
+	
+	public void exibeDados() {
+		System.out.println("(Alimentacao) nome: " + super.getNome() + ", quantidade de funcionarios: "
+				+ super.getQuantidadeFuncionarios() + ", salario base: R$" + super.getSalarioBaseFuncionario() + "\n"
+				+ super.getEndereco()+ "\nData de fundação:" + super.getDataFundacao() + ", data de alvará: " + dataAlvara.toString());
+				super.imprimeProdutos();
+	}
 	@Override
 	public String toString() {
 		return "Alimentacao ["+ super.toString() +"dataAlvara=" + dataAlvara + "]";

@@ -1,5 +1,6 @@
+import java.io.Serializable;
 
-public class Produto {
+public class Produto implements Serializable{
 	private String nome;
 	private double preco;
 	private Data dataval;
@@ -38,7 +39,7 @@ public class Produto {
 
 	@Override
 	public String toString() {
-		return "Produto [nome=" + nome + ", preco=" + preco + ", dataval=" + dataval + "]";
+		return "(Produto) nome: " + nome + ", preço: R$" + preco + ", data de validade: " + dataval;
 	}
 	
 	public boolean estaVencido(Data data) {

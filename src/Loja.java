@@ -1,5 +1,6 @@
+import java.io.Serializable;
 
-public class Loja {
+public abstract class Loja implements Serializable{
 
 	private String nome;
 	private int quantidadeFuncionarios;
@@ -69,6 +70,8 @@ public class Loja {
 		this.estoqueProdutos = estoqueProdutos;
 	}
 
+	public abstract void exibeDados();
+	
 	@Override
 	public String toString() {
 		return "Loja [nome=" + nome + ", quantidadeFuncionarios=" + quantidadeFuncionarios + ", salarioBaseFuncionario="
@@ -92,8 +95,11 @@ public class Loja {
 	}
 	
 	public void imprimeProdutos() {
+		System.out.println("Produtos:");
 		for(int i =0; i<estoqueProdutos.length; i++) {
-			System.out.println(estoqueProdutos[i].toString());
+			if(estoqueProdutos[i] != null) {
+			System.out.println( i + " - " + estoqueProdutos[i].toString());
+			}
 		}
 	}
 	

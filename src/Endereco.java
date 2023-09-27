@@ -1,5 +1,6 @@
+import java.io.Serializable;
 
-public class Endereco {
+public class Endereco implements Serializable{
 	private String nomeDaRua;
 	private String cidade;
 	private String estado;
@@ -78,7 +79,7 @@ public class Endereco {
 
 	@Override
 	public String toString() {
-		return "Endereco [nomeDaRua=" + nomeDaRua + ", cidade=" + cidade + ", estado=" + estado + ", pais=" + pais+ ", cep=" + cep + ", numero=" + numero + ", complemento=" + complemento + "]";
+		return "(Endereco) " + nomeDaRua + ", " + numero + ", " + cidade + ", " + estado + ", " + pais + ", " + cep + ", " + complemento;
 	}
 	
 	

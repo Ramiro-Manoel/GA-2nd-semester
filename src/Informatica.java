@@ -1,5 +1,6 @@
+import java.io.Serializable;
 
-public class Informatica extends Loja {
+public class Informatica extends Loja implements Serializable{
 
 	private double seguroEletronicos;
 
@@ -19,6 +20,13 @@ public class Informatica extends Loja {
 		this.seguroEletronicos = seguroEletronicos;
 	}
 
+	public void exibeDados() {
+		System.out.println("(Informatica) nome: " + super.getNome() + ", quantidade de funcionarios: "
+				+ super.getQuantidadeFuncionarios() + ", salario base: R$" + super.getSalarioBaseFuncionario() + "\n"
+				+ super.getEndereco()+ "\nData de fundação:" + super.getDataFundacao() + ", seguro dos eletronicos: R$" + seguroEletronicos);
+				super.imprimeProdutos();
+	}
+	
 	@Override
 	public String toString() {
 		return "Informatica [seguroEletronicos=" + seguroEletronicos + ", toString()=" + super.toString() + "]";
